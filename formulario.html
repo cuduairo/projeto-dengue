@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Controle de Fiscalização de Dengue</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Formulário de Controle de Fiscalização de Dengue</h2>
+        <form action="processa_formulario.php" method="post">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome do Agente</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            <div class="mb-3">
+                <label for="data" class="form-label">Data da Fiscalização</label>
+                <input type="date" class="form-control" id="data" name="data" required>
+            </div>
+            <div class="mb-3">
+                <label for="local" class="form-label">Local da Fiscalização</label>
+                <input type="text" class="form-control" id="local" name="local" required>
+            </div>
+            <div class="mb-3">
+                <label for="observacoes" class="form-label">Observações</label>
+                <textarea class="form-control" id="observacoes" name="observacoes" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <a href="index.html" class="btn btn-secondary">Voltar para Home</a>
+        </form>
+    </div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

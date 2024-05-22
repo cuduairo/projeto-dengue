@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Fiscalização de Dengue</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (isLoggedIn !== 'true') {
+                window.location.href = 'login.html'; // Certifique-se de que o caminho está correto
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Conteúdo da página -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <b class="logo">Controle de Fiscalização de Dengue</b><br>
+                <b class="log">Lins SP</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre_nos">Formulário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/prefeituralins/"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/prefeituradelins/"><i class="fab fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Conteúdo adicional -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+        <!-- Section: Sobre Nós -->
+        <section class="section section-sm section-first bg-default text-center" id="sobre_nos">
+            <div class="container">
+                <h2 class="section-title">Sobre Nós</h2>
+                <div class="row row-30 justify-content-center">
+                    <div class="col-md-7 col-lg-5 col-xl-6 text-lg-left">
+                        <img src="assets/img/dengue.png" alt="" class="img-fluid" />
+                    </div>
+                    <div class="col-lg-7 col-xl-6">
+                        <div class="row row-30">
+                            <div class="col-sm-6">
+                                <div class="box-icon-modern">
+                                    <i class="fa-solid fa-lightbulb icon"></i>
+                                    <h5 class="title">Dicas-ajudas</h5>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="box-icon-modern">
+                                    <i class="fa-solid fa-pencil icon"></i>
+                                    <h5 class="title">Nosso Objetivo?</h5>
+                                    <p>Projeto para facilitar o trabalho em prol da campanha contra a dengue.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="box-icon-modern">
+                                    <i class="fa-solid fa-question icon"></i>
+                                    <h5 class="title">Como isso Funciona?</h5>
+                                    <p>É bem simples, será um formulário em que o agente de saúde colocará os dados de toda sua patrulha.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Formulario -->
+        <section class="section section-sm section-fluid text-center" id="projects">
+            <div class="container-fluid">
+                <h2 class="section-title">Formulário</h2>
+                <p class="mt-2 mb-2">Clique no botão abaixo para abrir a aba de formulário de controle de fiscalização de dengue</p>
+                <a href="formulario.html" class="btn btn-primary">Abrir Formulário</a>
+            </div>
+        </section>
+
+        <!-- Section: Empresas Parceiras -->
+        <section class="section section-sm section-fluid bg-default text-center" id="Empresas">
+            <div class="container-fluid">
+                <h2>Empresas Parceiras</h2>
+                <div id="empresas-container" class="row justify-content-center"></div>
+            </div>
+        </section>
+
+        <!-- Section: Meios de Contatos -->
+        <section class="section section-sm bg-default text-center" id="contacts">
+            <h2>Meios de Contatos</h2>
+            <div class="container">
+                <div class="row row-30 justify-content-center">
+                    <div class="col-sm-8 col-md-6 col-lg-4">
+                        <div class="card contact-box">
+                            <div class="card-body">
+                                <i class="fa-solid fa-phone"></i>
+                                <p class="link">Telefone</p>
+                                <p>(14) 3533-4250</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-6 col-lg-4">
+                        <div class="card contact-box">
+                            <div class="card-body">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p class="link">Prefeitura de Lins</p>
+                                <p>www.lins.sp.gov.br</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-6 col-lg-4">
+                        <div class="card contact-box">
+                            <div class="card-body">
+                                <i class="fa-solid fa-map-marker-alt"></i>
+                                <p class="link">Endereço</p>
+                                <p>Av. Nicolau Zarvos, 754 - Vila Clelia, Lins, São Paulo 16401-300.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="section footer bg-dark text-center">
+            <div class="container">
+                <p>&copy; 2024 Controle de Fiscalização de Dengue. Todos os direitos reservados.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/prefeituralins/" class="icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/prefeituradelins/" class="icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

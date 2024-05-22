@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Controle de Fiscalização de Dengue</title>
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">Login</h2>
+        <form id="loginForm">
+            <div class="mb-3">
+                <label for="username" class="form-label">Usuário</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            <div id="error-message" class="mt-3 text-danger" style="display: none;">Usuário ou senha inválidos.</div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Credenciais fictícias para demonstração
+            const validUsername = 'admin';
+            const validPassword = '1234';
+
+            if (username === validUsername && password === validPassword) {
+                localStorage.setItem('isLoggedIn', 'true');
+                window.location.href = 'index.html'; // Certifique-se de que o caminho está correto
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+    </script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
